@@ -13,8 +13,10 @@ import java.util.List;
 
 @WebServlet(name = "HomeServlet" , urlPatterns = {"/home"})
 public class HomeServlet extends HttpServlet {
+    PhoneDao phone = new PhoneDao();
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        PhoneDao phone = new PhoneDao();
+
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -23,7 +25,5 @@ public class HomeServlet extends HttpServlet {
         request.getRequestDispatcher("listphone.jsp").forward(request, response);
     }
 
-    private int insertPhone (PhoneEntity input){
-        return phone.insertPhone(input);
-    }
+
 }

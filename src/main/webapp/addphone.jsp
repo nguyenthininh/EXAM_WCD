@@ -21,10 +21,10 @@
 
 <div class="container">
     <h2>Add Phone</h2>
-    <form action="/action_page.php">
+    <form action="addphone.jsp" method="post">
         <div class="form-group">
             <label >Name:</label>
-            <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name">
+            <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name_phone">
         </div>
         <div class="form-group">
             <label >Brand</label>
@@ -37,12 +37,22 @@
                 </select>
             </div>
         </div>
-        <div class="checkbox">
-            <label><input type="checkbox" name="remember"> Remember me</label>
+
+        <div class="form-group">
+            <label >Price:</label>
+            <input type="text" class="form-control" id="price" placeholder="Enter Price" name="price">
         </div>
+        <div class="form-group">
+            <label >Description:</label>
+            <input type="text" class="form-control" id="desc" placeholder="Enter Description" name="desc">
+        </div>
+        <button type="button" class="btn btn-danger" >Close</button>
         <button type="submit" class="btn btn-default">Submit</button>
     </form>
+
 </div>
+
+
 
 </body>
 </html>

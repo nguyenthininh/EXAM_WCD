@@ -11,17 +11,15 @@ public class PhoneDao {
     EntityManagerFactory emf = Persistence.createEntityManagerFactory("persistence");
     EntityManager em = emf.createEntityManager();
 
-    public int inserPhone(PhoneEntity phone){
-        try{
+    public void insertPhone(PhoneEntity phone){
+
             em = emf.createEntityManager();
             em.getTransaction().begin();
             em.persist(phone);
             em.getTransaction().commit();
             em.close();
-            return 1;
-        } catch (Exception e){
-            return 0;
-        }
+
+
     }
     public List<PhoneEntity> getAll(){
         em = emf.createEntityManager();

@@ -25,6 +25,13 @@ public class PhoneEntity {
     public PhoneEntity() {
     }
 
+    public PhoneEntity(String name, String brand, String price, String description) {
+        this.name = name;
+        this.brand = brand;
+        this.price = price;
+        this.description = description;
+    }
+
     public PhoneEntity(int id, String name, String brand, String price, String description) {
         this.id = id;
         this.name = name;
